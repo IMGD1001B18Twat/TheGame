@@ -1,61 +1,60 @@
-//Health checks
-if (isDead) {
-	if (animation != 5) {
-		instance_destroy(self);
-	}
-}
-else {
-	if (hp <= 0) {
-		isDead = true;
-		setAnimation(self, 4);
+vy+=grav;
+
+var topBox = y-bbox_top;
+var botBox = bbox_bottom-y;
+var leftBox = x-bbox_left;
+var rightBox = bbox_right-x;
+
+var nx = x+vx;
+var ny = y+vy;
+var ngrounded = false;
+
+with (obj_static) {
+	
+	var botTop = topBox+y-bbox_top;
+	var topBot = botBox+bbox_bottom-y;
+	var rightLeft = rightBox+x-bbox_left;
+	var leftRight = leftBox+bbox_right-x;
+	
+	var dx = other.x-x;
+	var dy = other.y-y;
+	
+	var alignedY = dy<0? -dy < botTop-1 : dy < topBot-1;
+	var alignedX = dx<0? -dx < rightLeft-1 : dx < leftRight-1;
+	
+	if (dx < 0) {
+		if (nx > x-rightLeft && alignedY) {
+			nx = x-rightLeft;
+			other.vx = 0;
+		}
 	}
 	else {
-		//Progress gravity
-		if (grounded) {
-			vy+=grav;
+		if (nx < x+leftRight && alignedY) {
+			nx = x+leftRight;
+			other.vx = 0;
 		}
-		//Physics
-		var nx = x+vx;
-		var ny = y+vy;
-		
-		//TODO maybe ease the stopping in order to have more precision? Could be cool
-		with (obj_static) {
-			if (other.place_meeting(nx, 0, self)) {
-				nx = x;
-				vx = 0;
-				break;
-			}
-		}
-		with (obj_static) {
-			if (other.place_meeting(0, ny, self)) {
-				ny = y;
-				vy = 0;
-				break;
-			}
-		}
-		
-		x = nx;
-		y = ny;
 	}
+	
+	if (dy < 0) {
+		if (ny > y-botTop && alignedX) {
+			ny = y-botTop;
+			other.vy = 0;
+			ngrounded = true;
+		}
+	}
+	else {
+		if (ny < y+topBot && alignedX) {
+			ny = y+topBot;
+			other.vy = 0;
+		}
+	}		
 }
 
-//TODO image speed?
 
-//Animation progression/updates
-if (sprite_index < 0 or image_index >= image_number-1) {
-	animation = -1;
-	setAnimation(self, 0);
-}
+x=nx;
+y=ny;
+grounded = ngrounded;
 
-if (hp < oldHp ) {
-	setAnimation(self, 3);
+if (y > room_height) {
+	instance_destroy();
 }
-if (vx != 0) {
-	setAnimation(self, 2);
-}
-if (vy != 0) {
-	setAnimation(self, 1);
-}
-setAnimation(self, 0);
-
-oldHp = hp;

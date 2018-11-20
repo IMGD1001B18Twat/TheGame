@@ -1,18 +1,17 @@
-thrower = -1;
-holder = -1;
+event_inherited();
 
 damage = 1;
-xthrow = 10;
-ythrow = -10;
 
-vx = 0;
-vy = 0;
-grav = .2;
+throwTime = 30;
+throwSpeed = 10;
+throwAngle = pi/6;
 
-attackDuration = 30;
-attackCooldown = 90;
+throwStatus = -1
 
-throwleft = 40;
-attackState = -attackCooldown;
 
-image_speed = .5;
+attackTime = 10;
+attackCooldown = 15;
+
+attackStatus = -attackCooldown;
+
+image_speed = 0;

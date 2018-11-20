@@ -1,5 +1,5 @@
 {
-    "id": "4b420012-a8e4-4a53-bfd9-b1f85a6f9129",
+    "id": "c040f6bd-f2c8-4e7a-a1ea-7e443982aed6",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "obj_static",
