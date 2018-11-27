@@ -11,8 +11,13 @@ left = ord("A");
 ability1 = ord("S");
 ability2 = ord("2");
 
-xspd = 5;
-yspd = 10;
+vxMax = 8;
+xAccel = 1;
+xAccelOpp = .4;
+
+xFriction = .95;
+
+jumpSpd = 10;
 
 facing = 1;
 held = -1;

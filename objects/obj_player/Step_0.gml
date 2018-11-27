@@ -1,19 +1,34 @@
 event_inherited();
 
-if (keyboard_check(jump) && grounded) {
-	vy = -yspd;
-}
+//!All Acceleration in this version is meant to be replaced!
 
-var nvx = 0;
+if (keyboard_check(jump) && grounded) {
+	vy = -jumpSpd;
+}
+vx*=xFriction;
+
+var dir = 0;
 if (keyboard_check(left)) {
-	nvx -= xspd;
+	dir -= 1;
 }
 if (keyboard_check(right)) {
-	nvx += xspd;
+	dir += 1;
 }
 
-vx = nvx;
-if (nvx != 0) {
-	facing = nvx>0?1:-1;	
+if (dir != 0) {
+	if (dir < 0) {
+		facing = -1;
+		image_xscale = facing;
+		if (vx > -vxMax) {
+			vx = max(vx-(vx>0?xAccelOpp:xAccel), -vxMax);
+		}
+	}
+	else {
+		facing = 1;	
+		image_xscale = facing;
+		if (vx < vxMax) {
+			vx = min(vx+(vx<0?xAccelOpp:xAccel), vxMax);
+		}
+	}
 }
-image_xscale = facing;
+

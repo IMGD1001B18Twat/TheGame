@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "206d2085-19d5-4786-9256-fc088b85d10f",
+            "Value": {
+                "id": "a7361724-809d-47e2-95c9-0bcab25ae80f",
+                "resourcePath": "objects\\obj_iceball\\obj_iceball.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "23908dd1-3f18-4c75-8e9f-84a2bc92fc84",
             "Value": {
                 "id": "55adab13-7a86-45bd-ac93-7ac19ffdaee3",
@@ -111,6 +119,22 @@
             }
         },
         {
+            "Key": "538e802b-3696-4953-93ec-84fac6df4dbd",
+            "Value": {
+                "id": "96c6efb6-762f-4b54-a053-5fb51dbf2cb8",
+                "resourcePath": "objects\\obj_wand_storm\\obj_wand_storm.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6043a734-c123-4bd1-b2a0-3b347cbe9668",
+            "Value": {
+                "id": "79338e23-ee45-4b24-8cfd-e568d2410d2f",
+                "resourcePath": "sprites\\spr_wand\\spr_wand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "62f45054-27de-456e-b344-0178be5528c4",
             "Value": {
                 "id": "5d53b8ac-2f2d-4c35-9372-4425d1899fd6",
@@ -156,6 +180,14 @@
                 "id": "549e5c2b-2360-4934-b586-44d1f21dc463",
                 "resourcePath": "sprites\\spr_player\\spr_player.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7fffc3a7-0a77-48cb-8ae0-5ee43337cb66",
+            "Value": {
+                "id": "ebb19c8f-59ce-4ea3-a5c6-f8172475533f",
+                "resourcePath": "objects\\obj_wand_ice\\obj_wand_ice.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -247,6 +279,14 @@
             }
         },
         {
+            "Key": "deafc1a6-86b0-46dc-8bcb-9e524fd14daf",
+            "Value": {
+                "id": "584eaa85-3ccb-4b19-9b85-dafc7d1e4fd2",
+                "resourcePath": "objects\\obj_iceblock\\obj_iceblock.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e346e374-222f-4640-9d04-2213b1d2f1fa",
             "Value": {
                 "id": "b3bf0c1d-6948-4154-98a8-68d44772d328",
@@ -308,6 +348,14 @@
                 "id": "59709947-4830-4187-8b7c-69c36c0aa8d2",
                 "resourcePath": "views\/ff662a2b-64af-4894-89a7-7574e64487a0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ffa4af66-77aa-44bc-b9ae-472b980ef647",
+            "Value": {
+                "id": "09ebcdf2-87e5-4404-8530-dbecb23770e5",
+                "resourcePath": "sprites\\spr_ice\\spr_ice.yy",
+                "resourceType": "GMSprite"
             }
         }
     ],
