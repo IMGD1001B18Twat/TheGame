@@ -1,4 +1,4 @@
-if (held >= 0) {
+if (held >= 0 && instance_exists(held)) {
 	instance_destroy(held);	
 }
 
