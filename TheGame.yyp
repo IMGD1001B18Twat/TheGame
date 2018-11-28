@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "bc954e08-6a98-44fd-a126-e1d5b2fc7f32",
+            "Value": {
+                "id": "5e2d6b55-20d6-42f9-9fcd-2a37ce841a77",
+                "resourcePath": "objects\\obj_shield\\obj_shield.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bfde0d18-1361-461d-94a9-5e308d6166f1",
             "Value": {
                 "id": "df97bb13-5788-4fc9-86e8-21dcd8155212",

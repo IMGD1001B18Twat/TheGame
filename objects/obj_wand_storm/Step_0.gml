@@ -32,6 +32,7 @@ else {
 		}
 		else {
 			if (keyboard_check(holder.ability1)) {
+				durability--;
 				zapStatus = zapCooldown;
 				zappedStatus = zapParalyze;
 				spellStatus = sharedCooldown;
@@ -58,6 +59,7 @@ else {
 		}
 		else {
 			if (spellStatus == 0 && keyboard_check(holder.ability2)) {
+				durability--;
 				blastStatus = blastCooldown;
 				spellStatus = sharedCooldown;
 				image_index = 2;

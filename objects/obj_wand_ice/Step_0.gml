@@ -18,6 +18,7 @@ else {
 			ball_state--;	
 		}
 		else if (keyboard_check(holder.ability1)) {
+			durability--;
 			image_index = 1;
 			ball_state = ball_cooldown;
 			spell_state = spell_cooldown;
@@ -30,7 +31,8 @@ else {
 			block_state--;	
 		}
 		else if (keyboard_check(holder.ability2)) {
-			image_index = 1;
+			durability--;
+			image_index = 2;
 			block_state = block_cooldown;
 			spell_state = spell_cooldown;
 			instance_create_layer(x+holder.sprite_width, y,"Instances", obj_iceblock);

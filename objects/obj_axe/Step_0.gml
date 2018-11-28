@@ -7,8 +7,6 @@ else {
 		throwStatus--;
 	}
 	else {
-		//TODO test
-		//!TODO perhaps factor out this functionality!
 		x = (holder.facing==1?holder.bbox_right:holder.bbox_left) + holder.sprite_width;
 		y = holder.bbox_bottom - ((holder.bbox_bottom - holder.bbox_top)>>1);
 		
