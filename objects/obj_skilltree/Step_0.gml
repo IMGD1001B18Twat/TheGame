@@ -3,8 +3,8 @@ p1_skills = obj_manager.player1_skills
 p2_skills = obj_manager.player2_skills
 c_tier = obj_manager.current_tier
 
-p1_skill_selected = -1
-p2_skill_selected = -1
+var oldp1 = p1_skill_selected;
+var oldp2 = p2_skill_selected;
 
 if (keyboard_check_pressed(ord("A"))) {
 	p1_skill_selected = 0
@@ -23,8 +23,6 @@ if (p1_skill_selected >= 0) {
 	player1_ready = true
 }
 
-
-
 if (keyboard_check_pressed(vk_left)) {
 	p2_skill_selected = 0
 } else if (keyboard_check_pressed(vk_up)) {
@@ -42,10 +40,18 @@ if (p2_skill_selected >= 0) {
 	player2_ready = true
 }
 
+if (oldp1 != p1_skill_selected || oldp2 != p2_skill_selected) {
+	timer = 0;	
+}
 
 if (player1_ready && player2_ready) {
-	obj_manager.current_tier++
-	room_goto_next()
+	if (timer < maxtimer) {
+		timer++;
+	}
+	else {
+		obj_manager.current_tier++
+		room_goto_next()
+	}
 }
 
 

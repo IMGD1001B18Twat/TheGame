@@ -1,6 +1,7 @@
 items[0] = obj_axe;
 items[1] = obj_wand_storm;
 items[2] = obj_wand_ice;
+items[3] = obj_shield;
 
 spawnTime = 60;
 astart = 2*pi;

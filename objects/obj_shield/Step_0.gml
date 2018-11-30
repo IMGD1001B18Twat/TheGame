@@ -8,7 +8,7 @@ if (holder < 0 || throw_status >= 0) {
 	}
 }
 else {
-	x = holder.x;
+	x = holder.x+image_xscale;
 	y = holder.y;
 		
 	image_xscale = holder.facing;
@@ -35,6 +35,7 @@ else {
 		}
 		else if (keyboard_check(holder.ability2)) {
 			throw_status = throw_frames;
+			vx = holder.facing * throwspeed;
 		}
 	}
 }

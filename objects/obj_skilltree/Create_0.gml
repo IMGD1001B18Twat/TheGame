@@ -2,6 +2,9 @@
 // You can write your code in this editor
 player1_ready = false
 player2_ready = false
+timer = 0;
+p1_skill_selected = -1
+p2_skill_selected = -1
 
 
 power1 = "does 50% more damage"
@@ -20,6 +23,8 @@ sub_endurance = "endurance"
 sub_agility = "agility"
 
 skilltree_title = "skill tree"
+
+maxtimer = 60;
 
 if (obj_manager.current_tier >= 3) {
 	room_goto(room_end)

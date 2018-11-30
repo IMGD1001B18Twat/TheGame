@@ -2,7 +2,7 @@ event_inherited();
 //TODO perchance a constructor
 
 //TODO better constants
-hp = 2;
+hp = 5;
 
 name = "Player 1";
 jump = ord("W");

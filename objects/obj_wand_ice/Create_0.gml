@@ -1,5 +1,7 @@
 event_inherited();
 
+durability = 3;
+
 block_cooldown = 150;
 ball_cooldown = 20;
 spell_cooldown = 5;

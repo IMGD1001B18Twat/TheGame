@@ -1,5 +1,7 @@
 event_inherited();
 
+durability = 2;
+
 damage = 1;
 
 throwTime = 30;

@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+draw_set_font(hp_font);
+draw_set_color(c_white);
+draw_set_halign(fa_left)
+
 column1 = room_width/8
 column2 = room_width/8*2
 column3 = room_width/8*4
@@ -12,7 +17,7 @@ row4 = room_height/8*6
 player1_score = string(ds_map_find_value(obj_manager.scoreboard,0))
 player2_score = string(ds_map_find_value(obj_manager.scoreboard,1))
 
-// title ans scores
+// title and scores
 draw_text(room_width/2-string_width(skilltree_title)/2,0,skilltree_title)
 draw_text(room_width/6-string_width(player1_score)/2,0,player1_score)
 draw_text(room_width/6*5-string_width(player2_score)/2,0,player2_score)
@@ -38,7 +43,7 @@ draw_text(column3-string_width(endurance3)/2,row4,endurance3)
 draw_text(column4-string_width(agility3)/2,row4,agility3)
 
 
-single_line_height = string_width("a")
+single_line_height = string_height("a")
 // selector
 row_position = 0
 switch (obj_manager.current_tier) {

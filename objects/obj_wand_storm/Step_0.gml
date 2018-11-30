@@ -7,19 +7,6 @@ else {
 		
 	image_xscale = holder.facing;
 	
-	if (zappedStatus > 0) {
-		for (var i = 0; i < array_length_1d(zapped); i++) {
-			var paralyzed = zapped[i];
-			if (instance_exists(paralyzed)) {
-				//!TODO zappy zappy!
-			}
-		}
-		if (zappedStatus == 1) {
-			zapped = 0;
-		}
-		zappedStatus--;
-	}
-	
 	if (spellStatus > 0) {
 		if (spellStatus == 1) {
 			image_index = 0;	
@@ -34,23 +21,12 @@ else {
 			if (keyboard_check(holder.ability1)) {
 				durability--;
 				zapStatus = zapCooldown;
-				zappedStatus = zapParalyze;
 				spellStatus = sharedCooldown;
 				image_index = 1;
 				
-				var hit = 0;
-				with (obj_player) {
-					if (self != other.holder
-					&& self != other
-					&& ( sign(other.holder.facing) == sign( bbox_left+((bbox_right+bbox_left)>>1)-other.x ))
-					&& (abs(bbox_bottom-other.y) < other.zapSize
-						|| abs(bbox_top-other.y) < other.zapSize
-						|| (bbox_top<other.y&&bbox_bottom>other.y))) {
-							
-						zapped[hit++] = self;
-					}
-				}
-				
+				var ball = instance_create_layer(x+holder.sprite_width, y,"Instances", obj_lightningball);
+				ball.shooter = holder;
+				ball.dir = holder.facing;
 			}
 		}
 		
