@@ -3,4 +3,4 @@ if (held >= 0 && instance_exists(held)) {
 }
 
 //!Temporary!
-room_restart();
+room_goto(room_skill)

@@ -21,3 +21,5 @@ jumpSpd = 10;
 
 facing = 1;
 held = -1;
+
+player_id = 0

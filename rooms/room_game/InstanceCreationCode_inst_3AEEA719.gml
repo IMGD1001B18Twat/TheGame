@@ -6,3 +6,5 @@ ability1 = vk_down;
 ability2 = vk_rshift;
 
 sprite_index = spr_player2;
+
+player_id=1
