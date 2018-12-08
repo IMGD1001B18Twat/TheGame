@@ -17,7 +17,9 @@ xAccelOpp = .4;
 
 xFriction = .95;
 
-jumpSpd = 10;
+jumpDuration = 20;
+jumpStatus = 0;
+jumpSpd = 6;
 
 facing = 1;
 held = -1;

@@ -1,4 +1,6 @@
-vy+=grav;
+if (!canFly) {
+	vy+=grav;	
+}
 
 var topBox = y-bbox_top;
 var botBox = bbox_bottom-y;

@@ -36,6 +36,7 @@ else {
 		else if (keyboard_check(holder.ability2)) {
 			throw_status = throw_frames;
 			vx = holder.facing * throwspeed;
+			canFly = true;
 		}
 	}
 }

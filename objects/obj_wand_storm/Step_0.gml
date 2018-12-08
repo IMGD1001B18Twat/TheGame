@@ -24,7 +24,7 @@ else {
 				spellStatus = sharedCooldown;
 				image_index = 1;
 				
-				var ball = instance_create_layer(x+holder.sprite_width, y,"Instances", obj_lightningball);
+				var ball = instance_create_layer(x+holder.sprite_width, y,layer, obj_lightningball);
 				ball.shooter = holder;
 				ball.dir = holder.facing;
 			}

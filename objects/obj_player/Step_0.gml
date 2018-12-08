@@ -1,9 +1,22 @@
 event_inherited();
 
 //!All Acceleration in this version is meant to be replaced!
-
-if (keyboard_check(jump) && grounded) {
-	vy = -jumpSpd;
+if (jumpStatus > 0) {
+	if (!keyboard_check(jump) || vy > 0) {
+		jumpStatus = 0;
+	}
+	else {
+		jumpStatus--;
+		vy=-jumpSpd;	
+	}
+	
+	if (jumpStatus == 0) {
+		canFly = false;	
+	}
+}
+else if (keyboard_check(jump) && grounded) {
+	canFly = true;
+	jumpStatus = jumpDuration;
 }
 vx*=xFriction;
 
