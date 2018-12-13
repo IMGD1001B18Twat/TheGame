@@ -25,8 +25,8 @@ else {
 				image_index = 1;
 				
 				var ball = instance_create_layer(x+holder.sprite_width, y,layer, obj_lightningball);
+				ball.direction = holder.facing<0?pi:0;
 				ball.shooter = holder;
-				ball.dir = holder.facing;
 			}
 		}
 		

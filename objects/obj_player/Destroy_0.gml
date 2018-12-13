@@ -2,10 +2,18 @@ if (held >= 0 && instance_exists(held)) {
 	instance_destroy(held);	
 }
 
-//!Temporary!
-if(room == room_game_multiplayer) {
-	room_goto(room_skill)
+if(room == room_game_singleplayer) {
+	room_goto(room_score_singleplayer);
 }
 else {
-	room_goto(room_title)
+	with (obj_score) {
+		if (other.name == "Player 1") {
+			player2Score++;
+		}
+		else {
+			player1Score++;
+		}
+	}
+	
+	room_goto(room_score_multiplayer);
 }

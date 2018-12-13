@@ -2,7 +2,7 @@
     "id": "1eff098e-6cc8-40ea-b569-4ead57709762",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_selectArrow",
+    "name": "obj_selectarrow",
     "eventList": [
         
     ],

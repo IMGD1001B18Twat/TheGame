@@ -1,2 +1,5 @@
-other.vx*=.1;
-other.vy*=.1;
+
+if (other != shooter) {
+	other.vx*=.1;
+	other.vy*=.1;
+}

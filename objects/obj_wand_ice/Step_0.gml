@@ -24,7 +24,7 @@ else {
 			spell_state = spell_cooldown;
 			var ball = instance_create_layer(x+holder.sprite_width, y,layer, obj_iceball);
 			ball.shooter = holder;
-			ball.dir = holder.facing;
+			ball.direction = holder.facing<0?pi:0;
 		}
 	
 		if (block_state > 0) {
@@ -35,7 +35,8 @@ else {
 			image_index = 2;
 			block_state = block_cooldown;
 			spell_state = spell_cooldown;
-			instance_create_layer(x+holder.sprite_width, y,layer, obj_iceblock);
+			var block = instance_create_layer(x+holder.sprite_width, y,layer, obj_iceblock);
+			block.shooter = holder;
 		}
 	}
 }

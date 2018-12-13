@@ -7,7 +7,7 @@ else {
 		throwStatus--;
 	}
 	else {
-		x = (holder.facing==1?holder.bbox_right:holder.bbox_left) + holder.sprite_width;
+		x = (holder.facing==1?holder.bbox_right:holder.bbox_left) + holder.sprite_width/2;
 		y = holder.bbox_bottom - ((holder.bbox_bottom - holder.bbox_top)>>1);
 		
 		image_xscale = holder.facing;

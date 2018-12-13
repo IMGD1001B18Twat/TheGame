@@ -1,9 +1,7 @@
 event_inherited();
 
-shooter = -1;
-dir = 1;
-
-spd = 5;
-damage = 1;
+shooter = 0;
 
 status = 50;
+spd = 5;
+damage = 1;

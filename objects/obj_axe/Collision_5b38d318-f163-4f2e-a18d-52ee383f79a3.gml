@@ -1,10 +1,12 @@
 if (other != holder) {
 	if (attackStatus > 0) {
+		audio_play_sound(sou_damage, 1, false);
 		durability--;
 		attackStatus = 0;
 		other.hp-=damage;
 	}
 	else if (throwStatus > 0) {
+		audio_play_sound(sou_damage, 1, false);
 		throwStatus = 0;
 		other.hp-=damage;
 	}

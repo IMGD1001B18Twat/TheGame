@@ -1,1 +1,1 @@
-audio_play_sound(sou_BGM,1000,true)
+audio_play_sound(sou_BGM,1000,true);
